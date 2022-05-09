@@ -10,9 +10,9 @@ public:
     using QCoreApplication::QCoreApplication;
 
 signals:
-    void callFoo();
+    void goDown(QString trace);
 
 public slots:
     void onRun();
-    void onLibCalls(QString who);
+    void handleGoUp(QString trace);
 };

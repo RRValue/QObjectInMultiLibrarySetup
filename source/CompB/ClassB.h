@@ -4,6 +4,8 @@
 
 #include <QtCore/QObject>
 
+class ClassA;
+
 class COMPB_API ClassB : public QObject
 {
     Q_OBJECT
@@ -13,8 +15,13 @@ public:
     virtual ~ClassB();
 
 signals:
-    void callFrom(QString who);
+    void goDown(QString trace);
+    void goUp(QString trace);
 
 public slots:
-    void doSomething();
+    void handleGoDown(QString trace);
+    void handleGoUp(QString trace);
+
+private:
+    ClassA* m_ObjA;
 };

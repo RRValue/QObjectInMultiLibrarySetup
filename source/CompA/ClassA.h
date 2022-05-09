@@ -13,8 +13,8 @@ public:
     virtual ~ClassA();
 
 signals:
-    void callFrom(QString who);
+    void goUp(QString trace);
 
 public slots:
-    void doSomething();
+    void handleGoDown(QString trace);
 };

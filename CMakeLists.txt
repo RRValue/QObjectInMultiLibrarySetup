@@ -53,7 +53,7 @@ TARGET_LINK_LIBRARIES(CompA     PRIVATE                         Qt6::Core)
 TARGET_LINK_LIBRARIES(CompB     PRIVATE CompA                   Qt6::Core)
 TARGET_LINK_LIBRARIES(CompC     PRIVATE       CompB             Qt6::Core)
 TARGET_LINK_LIBRARIES(CompD     PRIVATE       CompB             Qt6::Core)
-TARGET_LINK_LIBRARIES(Programm  PRIVATE CompA       CompC CompD Qt6::Core)
+TARGET_LINK_LIBRARIES(Programm  PRIVATE CompA CompB CompC CompD Qt6::Core)
 
 IF(MSVC)
     SET_TARGET_PROPERTIES(Programm  PROPERTIES PDB_OUTPUT_DIRECTORY ${PROJECT_BIN_PATH})

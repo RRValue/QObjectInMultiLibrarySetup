@@ -1,17 +1,14 @@
 #include "CompA/ClassA.h"
 
-#include <qdebug.h>
-
 ClassA::ClassA()
 {
 }
 
 ClassA::~ClassA()
 {
-    
 }
 
-void ClassA::doSomething()
+void ClassA::handleGoDown(QString trace)
 {
-    qDebug() << __FUNCTION__;
+    emit goUp(trace + __FUNCTION__ + "\n");
 }
